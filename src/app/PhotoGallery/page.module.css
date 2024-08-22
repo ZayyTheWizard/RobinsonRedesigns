@@ -1,0 +1,37 @@
+.navbarStyles {
+    position: relative;
+    z-index: 1;
+}
+
+.gallery {
+    max-width: 100%;
+    margin-top: 0px;
+    padding-top: 61px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 0.5rem;
+}
+
+.image {
+    cursor: pointer;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 4px 1px black;
+    border-radius: 8px;
+}

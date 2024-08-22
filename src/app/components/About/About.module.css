@@ -1,0 +1,31 @@
+.aboutContainer {
+    font-family: "Lora";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: Bolder;
+    font-size: 100px;
+    padding-top: 100px;
+    flex-direction: column;
+}
+
+.paragraph {
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+}
+
+.contentContainer {
+    display: flex;
+    width: 75%;
+}
+
+.img {
+    margin-top: 1em;
+}

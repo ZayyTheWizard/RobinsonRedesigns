@@ -1,0 +1,38 @@
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+
+.main {
+    font-family: 'Lora';
+}
+
+.title {
+    margin: 0;
+    padding: 140px;
+    display: flex;
+    justify-content: center;
+    font-size: 75px;
+}
+
+.title h1 {
+    font-weight: bolder;
+}
+
+.serviceFooter {
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.serviceFooter a {
+    text-decoration: none;
+    background-color: #f9a747;
+    padding: 1em 6em 1em 6em;
+    border-radius: 20px;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 100px;
+}

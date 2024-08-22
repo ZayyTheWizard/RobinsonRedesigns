@@ -1,0 +1,40 @@
+.container {
+    background-color: black;
+    padding: 2em 2em 2em 2em;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 11px #f9a747;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.input {
+    width: 400px;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.body {
+    width: 400px;
+    padding: 0.5em;
+    padding-bottom: 20em;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttonStyle {
+    font-family: "Lora";
+    font-size: 50px;
+    color: white;
+    background-color: #f9a747;
+    box-shadow: 1px 1px 11px 1px #f9a747;
+    border-radius: 20px
+}
+
+.buttonStyle:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+.test {
+    font-family: 'Lora';
+    font-weight: bolder;
+}
+
+.navbarStyles {
+    position: relative;
+    z-index: 1;
+}
+
+.about {
+    margin-top: 100px;
+    margin-bottom: 140px;
+}
