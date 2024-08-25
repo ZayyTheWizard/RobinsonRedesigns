@@ -19,7 +19,6 @@ export default function Carousel({ images }: imageProps) {
   useEffect(() => {
     setTimeout(() => {
       slideRight();
-      console.log(curr);
     }, 2500);
   });
 

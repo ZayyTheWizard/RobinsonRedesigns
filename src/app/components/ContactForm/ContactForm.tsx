@@ -4,16 +4,16 @@ import styles from "./ContactForm.module.css";
 import emailjs from "@emailjs/browser";
 
 interface ContactFormProps {
-  setisLoading: (isLoading: boolean) => void;
+  setStatus: (status: string) => void;
 }
 
-export default function ContactForm({ setisLoading }: ContactFormProps) {
+export default function ContactForm({ setStatus }: ContactFormProps) {
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    setisLoading(true);
+    setStatus("Loading");
 
     emailjs
       .sendForm(
@@ -26,12 +26,12 @@ export default function ContactForm({ setisLoading }: ContactFormProps) {
       )
       .then(
         () => {
-          console.log("SUCCESS!");
-          setisLoading(false);
           form.current?.reset();
+          setStatus("Success");
         },
         (error: any) => {
           console.log("FAILED...", error.text);
+          setStatus("Failure");
         }
       );
   };
