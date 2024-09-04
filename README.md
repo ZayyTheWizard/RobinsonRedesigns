@@ -1,3 +1,7 @@
+## Website for Robin's Redesigns
+
+This is the Website contracted for Robinson's Redesigns built in ReactJs (TypeScript)...
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
