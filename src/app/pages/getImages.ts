@@ -14,7 +14,7 @@ const client = new S3Client({
 
 export async function getImagesFromS3() {
     const command = new ListObjectsV2Command({
-        Bucket: "pat-bucket-testing-000-000-001",
+        Bucket: "pat-pic-000-000-001",
         MaxKeys: 1000,
     });
 

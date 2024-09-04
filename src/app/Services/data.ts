@@ -6,15 +6,16 @@ type dataProp = {
 
 export const data: dataProp[] = [
     {
-        src: "/servicesStuff/Landscaping.jpg",
-        name: "Landscaping",
-        description: "Professional design and maintenance of outdoor spaces, including lawn care, garden design, and hardscape installation, to enhance the beauty and functionality of your property.",
-    },
-    {
         src: "/servicesStuff/Electrical.jpg",
         name: "Electrical and Troubleshooting",
         description: "Comprehensive electrical services, including wiring, repairs, and diagnostics, to safely address and resolve electrical issues in residential or commercial properties.",
     },
+    {
+        src: "/servicesStuff/Landscaping.jpg",
+        name: "Landscaping",
+        description: "Professional design and maintenance of outdoor spaces, including lawn care, garden design, and hardscape installation, to enhance the beauty and functionality of your property.",
+    },
+    
     {
         src: "/servicesStuff/Security.jpg",
         name: "Security System Installation",
