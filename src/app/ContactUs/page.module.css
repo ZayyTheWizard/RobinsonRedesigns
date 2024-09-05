@@ -54,7 +54,11 @@
 
     .line {
         background-color: black;
-        height: 0px;
-        width: 0.5%;
+        height: 0%;
+        width: 0%;
+    }
+
+    .contactForm {
+        margin-bottom: 20em;
     }
 }

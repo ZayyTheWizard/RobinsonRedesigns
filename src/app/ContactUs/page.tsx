@@ -52,7 +52,9 @@ export default function Contactus() {
         <div className={Styles.content}>
           <Phone />
           <div className={Styles.line}></div>
-          <ContactForm setStatus={setStatus} />
+          <div className={Styles.contactForm}>
+            <ContactForm setStatus={setStatus} />
+          </div>
         </div>
       </div>
 

@@ -18,13 +18,15 @@ export default function About() {
             visions while ensuring affordability and quality in every project.
           </p>
         </div>
-        <Image
-          src={"/assets/homeLogo.png"}
-          width={500}
-          height={500}
-          alt=""
-          className={Styles.img}
-        />
+        <div className={Styles.image}>
+          <Image
+            src={"/assets/homeLogo.png"}
+            width={500}
+            height={500}
+            alt=""
+            className={Styles.img}
+          />
+        </div>
       </div>
     </div>
   );
