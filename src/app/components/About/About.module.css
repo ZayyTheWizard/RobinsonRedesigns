@@ -19,6 +19,14 @@
         flex-direction: column;
         width: 75%;
     }
+
+    .image {
+        width: 0rem;
+    }
+
+    .img {
+        width: 3em;
+    }
 }
 
 .contentContainer {
