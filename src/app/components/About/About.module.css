@@ -27,6 +27,17 @@
     .img {
         width: 3em;
     }
+
+    .aboutContainer {
+        font-family: "Lora";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: Bolder;
+        font-size: 75px;
+        padding-top: 100px;
+        flex-direction: column;
+    }
 }
 
 .contentContainer {
