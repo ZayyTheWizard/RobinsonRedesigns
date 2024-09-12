@@ -1,29 +1,57 @@
 "use client";
-import Styles from "./navbar.module.css";
-import Link from "next/link";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import Styles from "./navbar.module.css";
+import { routes, routesType } from "./routes";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const currPath = usePathname();
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const renderRoutes = (routes: routesType[]) => {
+    return routes.map((route: routesType) => (
+      <li key={route.Name}>
+        <Link href={route.Route}>{route.Name}</Link>
+        {route.Children && route.Children.length > 0 && (
+          <ul>{renderRoutes(route.Children)}</ul>
+        )}
+      </li>
+    ));
+  };
+
   return (
-    <nav className={Styles.nav}>
-      <div className={Styles.sub}>
-        <Image
-          src="/assets/Robinson.png"
-          width={55}
-          height={55}
-          alt="Robinson's Redesigns Logo"
-        ></Image>
-        <li className={currPath === "/" ? Styles.home : Styles.home}>
-          <Link href="/">Home</Link>
-        </li>
+    <nav className={scrollPosition > 0 ? Styles.nav : Styles.nav2}>
+      <div className={Styles.leftSide}>
+        <Link href="/">
+          <Image
+            src="/assets/RR.png"
+            width={45}
+            height={45}
+            alt=""
+            loading="lazy"
+            className={Styles.logo}
+          ></Image>
+        </Link>
+        <Link href="/" className={Styles.Title}>
+          Robinson&apos;s Redesigns
+        </Link>
       </div>
 
       <div className={Styles.hamburger} onClick={toggleMenu}>
@@ -33,16 +61,21 @@ export default function Navbar() {
       </div>
 
       <ul className={`${Styles.menu} ${menuOpen ? Styles.open : Styles.close}`}>
-        <li className={currPath === "/PhotoGallery" ? Styles.active : ""}>
-          <Link href="/PhotoGallery">Photo Gallery</Link>
-        </li>
-        <li className={currPath === "/Services" ? Styles.active : ""}>
-          <Link href="/Services">Services</Link>
-        </li>
-        <li className={currPath === "/ContactUs" ? Styles.active : ""}>
-          <Link href="/ContactUs">Contact Us</Link>
-        </li>
+        {routes.map((route: routesType) => (
+          <li key={route.Name}>
+            <Link href={route.Route}>{route.Name}</Link>
+            {route.Children && route.Children.length > 0 && (
+              <ul className={Styles.submenu}>{renderRoutes(route.Children)}</ul>
+            )}
+          </li>
+        ))}
       </ul>
     </nav>
   );
 }
+
+/*
+Main navbar color is under ".Nav" tag
+".Nav a" tag turns changes all the Links on navbar color
+".bar" changes bar color in mobile mode
+*/

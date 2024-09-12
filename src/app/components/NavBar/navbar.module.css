@@ -2,12 +2,11 @@
     display: flex;
     justify-content: space-between;
     text-decoration: none;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.8);
     align-items: center;
     width: 100%;
-    height: 8%;
-    position: fixed;
-    margin: 0px;
+    height: 4rem;
+    font-family: "Lora";
 }
 
 .nav ul {
@@ -17,6 +16,7 @@
     display: flex;
     gap: 1rem;
     list-style: none;
+    font-weight: bolder;
 }
 
 .nav li {
@@ -24,66 +24,84 @@
 }
 
 .nav a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    font-family: "Lora";
+    font-weight: bolder;
+}
+
+.menu a:hover {
+    color: rgb(96, 96, 96);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.submenu {
+   display: none;
+   visibility: hidden;
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+}
+
+.nav li:hover > .submenu {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    padding-top: 1.5em;
+    text-decoration: none;
+    display: flex;
+    visibility: inherit;
+    flex-direction: column;
+    background-color: none;
+    transition: 0.1s ease-in-out;
+    font-weight: bolder;
+    width: 100%;
+}
+
+.nav li:hover > .submenu a {
+    padding: 1em 1em 0em 0em;
 }
 
 .home {
-    border: #f9a747;
-    border-radius: 20px;
-    border-style: solid;
-    padding: 0px;
-    border-left: 100px;
-    border-right: 100px;
-    justify-content: center;
-    padding-right: 23px;
+    margin-left: 0.3rem;
 }
 
-.sub {
+.leftSide {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    margin-left: 1rem;
+    list-style: none;
 }
 
-.active a{
-    color: #ff98cb;
-}
-
-.nav a:hover{
-    color: rgb(156, 156, 156);
-}
-
-
-  
-.bar {
+.logo {
     width: 100%;
-    height: 4px;
-    background-color: #fff;
-    transition: all 0.3s ease;
+    height: 100%;
 }
 
-.hamburger {
-    display: none; /* Initially hidden */
+.logo:hover {
+    cursor: pointer;
 }
+
 
 @media (max-width: 768px) {
     .hamburger {
-        width: 30px;
-        height: 22px;
+        width: 2em;
+        height: 1.7em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
     }
+
     .menu {
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #333;
-      padding: 20px;
+      top: 4em;
+      right: 0.5em;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 5em;
       border-radius: 8px;
     }
     
@@ -97,4 +115,75 @@
     .hamburger {
       display: flex;
     }
-  }
+
+    .bar {
+        width: 100%;
+        height: 4px;
+        background-color: rgba(255, 255, 255, 1);
+        transition: all 0.3s ease;
+    }
+
+    .nav li:hover > .submenu {
+        display: none;
+        visibility: hidden;
+        z-index: -1;
+    }
+
+    .nav2 li:hover > .submenu {
+        display: none;
+        visibility: hidden;
+        z-index: -1;
+    }
+}
+
+.nav2 ul {
+    padding: 0;
+    padding-right: 30px;
+    margin:0;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    font-weight: bolder;
+}
+
+.nav2 li {
+    text-decoration: none;
+}
+
+.nav2 a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav2 {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    font-family: "Lora";
+}
+
+.nav2 li:hover > .submenu {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    padding-top: 1.5em;
+    text-decoration: none;
+    display: flex;
+    visibility: inherit;
+    flex-direction: column;
+    background-color: none;
+    transition: 0.1s ease-in-out;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0);
+    width: 7rem;
+}
+
+.nav2 li:hover > .submenu a {
+    padding: 1em 1em 0em 0em;
+}

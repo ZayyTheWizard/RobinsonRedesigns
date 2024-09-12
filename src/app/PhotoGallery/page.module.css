@@ -1,12 +1,14 @@
 .navbarStyles {
-    position: relative;
+    width: 100%;
+    position: fixed;
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .gallery {
     max-width: 100%;
     margin-top: 0px;
-    padding-top: 61px;
+    padding-top: 69px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     gap: 0.5rem;
