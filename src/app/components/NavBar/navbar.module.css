@@ -85,13 +85,45 @@
 
 
 @media (max-width: 768px) {
-    .hamburger {
+    .hamburgerClose {
         width: 2em;
         height: 1.7em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
+    }
+
+    .hamburgerOpen {
+        width: 2em;
+        height: 1.7em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 100%;
+        height: 4px;
+        background-color: #000000;
+        transition: all 0.3s ease;
+    }
+
+    .hamburgerOpen .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 12px;
+    }
+
+    .hamburgerOpen .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburgerOpen .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -12px;
     }
 
     .menu {

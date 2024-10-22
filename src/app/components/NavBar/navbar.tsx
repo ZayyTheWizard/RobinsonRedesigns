@@ -54,7 +54,12 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className={Styles.hamburger} onClick={toggleMenu}>
+      <div
+        className={`${Styles.hamburger} ${
+          menuOpen ? Styles.hamburgerOpen : Styles.hamburgerClose
+        }`}
+        onClick={toggleMenu}
+      >
         <div className={Styles.bar}></div>
         <div className={Styles.bar}></div>
         <div className={Styles.bar}></div>
