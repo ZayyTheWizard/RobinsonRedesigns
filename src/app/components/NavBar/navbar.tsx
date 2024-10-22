@@ -60,7 +60,15 @@ export default function Navbar() {
         <div className={Styles.bar}></div>
       </div>
 
-      <ul className={`${Styles.menu} ${menuOpen ? Styles.open : Styles.close}`}>
+      <ul
+        className={`${Styles.menu} ${
+          menuOpen
+            ? scrollPosition > 0
+              ? Styles.open
+              : Styles.open2
+            : Styles.close
+        }`}
+      >
         {routes.map((route: routesType) => (
           <li key={route.Name}>
             <Link href={route.Route}>{route.Name}</Link>

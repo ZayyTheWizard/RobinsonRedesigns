@@ -98,18 +98,37 @@
       display: none;
       flex-direction: column;
       position: absolute;
+      align-items: center;
       top: 4em;
-      right: 0.5em;
-      background-color: rgba(0, 0, 0, 0.8);
       padding: 5em;
-      border-radius: 8px;
+      border-radius: 0px;
     }
-    
+
     .menu.close {
         display: none;
     }
+    
     .menu.open {
-      display: flex;
+        width: 100%;
+        display: visible;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .menu.open2 {
+        width: 100%;
+        display: visible;
+    }
+
+    .menu.open2 a {
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .menu.open ul {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .menu.open2 ul {
+        background-color: rgba(255, 255, 255, 0);
     }
   
     .hamburger {
